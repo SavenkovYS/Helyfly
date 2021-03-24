@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #37373F;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/montserrat-regular.woff") format("woff"), url("../fonts/montserrat-regular.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/montserrat-500.woff") format("woff"), url("../fonts/montserrat-500.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/montserrat-600.woff") format("woff"), url("../fonts/montserrat-600.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/montserrat-700.woff") format("woff"), url("../fonts/montserrat-700.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/montserrat-800.woff") format("woff"), url("../fonts/montserrat-800.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/montserrat-900.woff") format("woff"), url("../fonts/montserrat-900.woff2") format("woff2"); }
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 15px; }
+  .page-header__logo svg {
+    width: 84px;
+    height: 16px; }
+  .page-header__whereabouts {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #5286EC;
+    text-decoration: none; }
+  .page-header__phone {
+    display: none; }
+  .page-header__profile {
+    width: 22px;
+    height: 22px;
+    margin-left: auto;
+    background-image: url("../../img/icon-profile.png");
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    cursor: pointer; }
+
+@media (min-width: 1000px) {
+  .page-header {
+    padding: 40px 150px; }
+    .page-header__logo svg {
+      width: 129px;
+      height: 23px; }
+    .page-header__whereabouts {
+      display: none; }
+    .page-header__phone {
+      display: block;
+      margin-left: 35px;
+      padding-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #B3B3B3;
+      text-decoration: none; }
+      .page-header__phone span {
+        color: #37373F; } }

@@ -20,10 +20,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("src/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("src/css"))
     .pipe(server.stream());
 });
 

@@ -1,0 +1,37 @@
+// ГЛОБАЛЬНЫЕ СТИЛИ
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: $ff-primary;
+    color: $clr-text;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: $fw-reg;
+    font-style: normal;
+
+    background-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
