@@ -38,28 +38,45 @@
             <a href="" class="intro__book">Забронировать место</a> 
         </section> <!-- /intro -->
 
+        <!-- ФОТОСЕССИЯ -->
+
         <section class="photoshoot">
-            <h2 class="photoshoot__title">Фотосессия в вертолете</h2>
-            <img 
-                class="photoshoot__img"
-                src="img/features-video.png"  
-                alt="Целующиеся люди в вертолете на фоне живописной панорамы города"
-                width="290"
-                height="200"
-            >
-            <p class="photoshoot__text">
-                Полет на вертолете это прекрасная возможность получить новые ощущения! 
-                А наш замечательный фотограф запечатлит лучшие моменты!
-            </p>
-            <ul class="photoshoot__features-list">
-                <li class="photoshoot__features-item">3 Часа съемки</li>
-                <li class="photoshoot__features-item">Русский</li>
-                <li class="photoshoot__features-item">от 850$</li>
-                <li class="photoshoot__features-item">Дубаи</li>
-                <li class="photoshoot__features-item">Более 50 Фотографий</li>
-            </ul>
-            <a class="photoshoot__rating" href="">Более 150 отзывов с оценкой</a>
+            <div class="photoshoot__container">
+                <h2 class="photoshoot__title">Фотосессия в вертолете</h2>
+                <picture class="photoshoot__img-set">
+                    <source srcset="img/features-video-dsk.png" media="(min-width:1000px)">
+                    <img 
+                        class="photoshoot__img"
+                        src="img/features-video.png"  
+                        alt="Целующиеся люди в вертолете на фоне живописной панорамы города"
+                        width="290"
+                        height="200"
+                    >
+                </picture>
+                <p class="photoshoot__text">
+                    Полет на вертолете это прекрасная возможность получить новые ощущения! 
+                    А наш замечательный фотограф запечатлит лучшие моменты!
+                </p>
+                <ul class="photoshoot__features-list">
+                    <li class="photoshoot__features-item photoshoot__features-item--time">3 Часа съемки</li>
+                    <li class="photoshoot__features-item photoshoot__features-item--language">Русский</li>
+                    <li class="photoshoot__features-item photoshoot__features-item--price">
+                        <p>от <span>850$</span></p>
+                    </li>
+                    <li class="photoshoot__features-item photoshoot__features-item--location">Дубаи</li>
+                    <li class="photoshoot__features-item photoshoot__features-item--photo">Более 50 Фотографий</li>
+                </ul>
+                <div class="photoshoot__rating-container">
+                    <a class="photoshoot__rating-link" href="">Более <span>150</span> отзывов с оценкой</a>
+                </div>
+            </div>
+
+            <!-- фотогалерея -->
+
+            <h3 class="photoshoot__subtitle">Фотографии пакета<span>:</span></h3>
+
             <ul class="photoshoot__gallery-list">
+
                 <li class="photoshoot__gallery-item">
                     <img 
                         class="photoshoot__gallery-img" 
@@ -68,7 +85,8 @@
                         width="277"
                         heigth="185"
                     >
-                </li>
+                </li> <!-- / gallery-item -->
+
                 <li class="photoshoot__gallery-item">
                     <img 
                         class="photoshoot__gallery-img" 
@@ -77,7 +95,8 @@
                         width="277"
                         heigth="185"
                     >
-                </li>
+                </li> <!-- / gallery-item -->
+
                 <li class="photoshoot__gallery-item">
                     <img 
                         class="photoshoot__gallery-img" 
@@ -86,7 +105,8 @@
                         width="277"
                         heigth="185"
                     >
-                </li>
+                </li> <!-- / gallery-item -->
+
                 <li class="photoshoot__gallery-item">
                     <img 
                         class="photoshoot__gallery-img" 
@@ -95,10 +115,12 @@
                         width="277"
                         heigth="185"
                     >
-                </li>
+                </li> <!-- / gallery-item -->
+
             </ul>
             <button class="photoshoot__show-all">Показать все фото</button>
-        </section>
+        </section> <!-- / photoshoot -->
+
         <section class="about">
             <h2 class="visually-hidden">Об организаторе мероприятия</h2>
             <div class="about__col-left">
