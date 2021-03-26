@@ -192,7 +192,18 @@
 
 @media (min-width: $width-dsk) {
     .photoshoot {
+        position: relative;
         padding: 70px 150px 25px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 300px);
+            border-bottom: 1px solid $br-clr-primary;
+        }
 
         &__container {
             display: grid;

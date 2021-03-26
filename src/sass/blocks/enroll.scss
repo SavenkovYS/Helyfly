@@ -1,0 +1,247 @@
+.enroll {
+    padding: 10px 20px;
+
+    &__subtitle {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+
+        font-size: 28px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    &__container {
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto;
+
+        border: 1px solid $br-clr-primary;
+    }
+
+    &__date {
+        margin: 0;
+
+        font-size: 18px;
+        line-height: 1.4;
+        text-align: center;
+
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba($br-clr-primary, 0.5);
+
+        & span {
+            font-weight: $fw-med;
+        }
+    }
+
+    &__date-input {
+        position: absolute;
+        top: 10px;
+        left: 300px;
+
+        width: 35px;
+        height: 40px;
+
+        border: none;
+        cursor: pointer;
+    }
+
+    &__date-input::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 35px;
+
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+
+        background-image: url('../../img/icon-date.png');
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+        z-index: 10;
+        background-color: inherit;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    &__item {
+        padding: 30px 20px;
+        
+        border-bottom: 1px solid rgba($br-clr-primary, 0.5);
+    }
+
+    &__time,
+    &__seats,
+    &__price {
+        margin: 0;
+
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    &__time,
+    &__price {
+        margin-bottom: 7px;
+    }
+
+    &__seats {
+        margin-bottom: 20px;
+    }
+
+    &__price {
+        font-weight: $fw-semibold;
+    }
+
+    &__book {
+        display: inline-block;
+        padding: 12px 30px;
+
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: $fw-med;
+        color: $clr-accent;
+        text-decoration: none;
+
+        border: 2px solid $clr-accent;
+        border-radius: 5px;
+        transition: color 0.2s ease-in-out,
+                    border 0.2s ease-in-out;
+    }
+
+    &__book:hover {
+        color: rgba($clr-accent, 0.6);
+        border-color: rgba($clr-accent, 0.6);
+    }
+
+    &__book:focus {
+        outline: 3px solid $clr-accent;
+        outline-offset: 4px;
+    }
+
+    &__book:active {
+        color: rgba($clr-accent, 0.3);
+        border-color: rgba($clr-accent, 0.3);
+    }
+
+    &__rating {
+        position: relative;
+        margin: 0;
+        padding: 30px 20px 45px 70px;
+
+        font-size: 13px;
+        line-height: 1.4;
+
+        & span {
+            font-weight: $fw-semibold;
+        }
+    }
+
+    &__rating::before {
+        content: '';
+
+        position: absolute;
+        top: 32px;
+        left: 20px;
+        width: 37px;
+        height: 41px;
+
+        background-image: url('../../img/icon-rating.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__rating::after {
+        content: '';
+
+        position: absolute;
+        bottom: 25px;
+        left: 70px;
+        width: 118px;
+        height: 17px;
+
+        background-image: url('../../img/icon-stars.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: $width-dsk) {
+    .enroll {
+        padding: 40px 150px;
+
+        &__subtitle {
+            width: 200px;
+            margin: 0;
+            margin-bottom: 25px;
+    
+            font-size: 20px;
+            font-weight: $fw-med;
+            text-align: left;
+        }
+    
+        &__container {
+            max-width: 1200px;
+            margin: 0;
+        }
+    
+        &__date {
+            text-align: left;
+    
+            padding: 25px 30px;
+        }
+    
+        &__date-input {
+            top: 20px;
+            left: 220px;
+        }
+    
+        &__item { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px 20px 30px;
+        }
+
+        &__col-left {
+            width: 50%;
+        }
+
+        &__seats {
+            margin-bottom: 0;
+        } 
+    
+        &__rating {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+    
+            font-size: 18px;
+        }
+    
+        &__rating::before {
+            position: static;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+    
+        &__rating::after {
+            position: static;
+            display: inline-block;
+            margin-left: 20px;
+            margin-bottom: 3px;
+        } 
+    }
+}

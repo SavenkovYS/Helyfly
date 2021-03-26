@@ -123,6 +123,18 @@
 
         <section class="about">
             <h2 class="visually-hidden">Об организаторе мероприятия</h2>
+            <div class="about__col-right">
+                <img 
+                    class="about__author-img" 
+                    src="img/author.png" 
+                    alt="Марина Иванова - организатор" 
+                    width="140" 
+                    height="140"
+                >
+                <p class="about__author-name">Марина Иванова</p>
+                <p class="about__author-job">Фотограф</p>
+                <a class="about__author-more" href="">Показать больше информации о фотографе</a>
+            </div>
             <div class="about__col-left">
                 <div class="about__author-description">
                     <h3 class="about__subtitle">Об организаторе:</h3>
@@ -150,41 +162,35 @@
                     <button class="about__read-more about__read-more--services">Читать еще</button>
                 </div>
             </div>
-            <div class="about__col-right">
-                <img 
-                    class="about__author-img" 
-                    src="img/author.png" 
-                    alt="Марина Иванова - организатор" 
-                    width="140" 
-                    height="140"
-                >
-                <p class="about__author-name">Марина Иванова</p>
-                <p class="about__author-job">Фотограф</p>
-                <a class="about__author-more" href="">Показать больше информации о фотографе</a>
-            </div>
         </section>
         <section class="enroll">
             <h2 class="visually-hidden">Запишись на полет уже сейчас</h2>
             <p class="enroll__subtitle">Доступная съемка в ближайшее время:</p>
             <div class="enroll__container">
-                <p class="enroll__date">Пятница, 14 сентября</p>
-                <label class="enroll__date-input" for="date" aria-label="Выберите дату"></label>
-                <input class="visually-hidden" type="date" name="date" id="date">
+                <p class="enroll__date">Пятница, <span>14</span> сентября</p>
+                <label class="enroll__date-label" for="date" aria-label="Выберите дату"></label>
+                <input class="enroll__date-input" type="date" name="date" id="date">
                 <ul class="enroll__list">
                     <li class="enroll__item">
-                        <p class="enroll__time">15:00 - 18:00</p>
-                        <p class="enroll__price">1500₽</p>
-                        <p class="enroll__seats">Осталось - 1 место</p>
+                        <div class="enroll__col-left">
+                            <p class="enroll__time">15:00 - 18:00</p>
+                            <p class="enroll__price">1500₽</p>
+                            <p class="enroll__seats">Осталось - 1 место</p>
+                        </div>
                         <a class="enroll__book" href="">Выбрать</a>
                     </li>
                     <li class="enroll__item">
-                        <p class="enroll__time">19:00 - 22:00</p>
-                        <p class="enroll__price">1500₽</p>
-                        <p class="enroll__seats">Осталось - 1 место</p>
+                        <div class="enroll__col-left">
+                            <p class="enroll__time">19:00 - 22:00</p>
+                            <p class="enroll__price">1500₽</p>
+                            <p class="enroll__seats">Осталось - 1 место</p>
+                        </div>
                         <a class="enroll__book" href="">Выбрать</a>
                     </li>
                 </ul>
-                <p class="enroll__rating">Более <span>50</span> отзывов с оценкой</p>
+                <div class="enroll__rating">
+                    <p>Более <span>50</span> отзывов с оценкой</p>
+                </div>
             </div>
         </section>
         <section class="venue">
