@@ -845,3 +845,157 @@ img {
       color: #5286EC; }
       .venue__organiser-more span {
         display: none; } }
+
+.comments {
+  padding: 40px 20px; }
+  .comments__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center; }
+    .comments__title span {
+      display: none; }
+  .comments__list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .comments__item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: "img         name" "img         job" "img         rating" "rating-text rating-text" "text        text" "date        date";
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.5); }
+  .comments__item:last-child {
+    margin-bottom: 40px; }
+  .comments__author-img {
+    grid-area: img;
+    width: 84px;
+    height: 84px;
+    margin-right: 20px; }
+  .comments__author-name {
+    grid-area: name;
+    margin: 0;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500; }
+  .comments__author-job {
+    grid-area: job;
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.5; }
+  .comments__rating-img {
+    grid-area: rating; }
+  .comments__rating-text, .comments__date {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #B3B3B3; }
+  .comments__rating-text {
+    grid-area: rating-text;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 23px; }
+  .comments__rating-text::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 9px;
+    border-bottom: 2px solid #6AAD4A;
+    border-left: 2px solid #6AAD4A;
+    transform: rotate(-45deg); }
+  .comments__text {
+    grid-area: text;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 1.5; }
+  .comments__date {
+    grid-area: date; }
+  .comments__show-all {
+    display: block;
+    margin: 0 auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #5286EC;
+    text-align: center;
+    text-decoration: none; }
+  .comments__show-all:hover {
+    color: rgba(82, 134, 236, 0.8); }
+  .comments__show-all:focus {
+    outline: 3px solid #5286EC; }
+  .comments__show-all:active {
+    color: rgba(82, 134, 236, 0.3); }
+
+@media (min-width: 1000px) {
+  .comments {
+    padding: 130px 150px 50px; }
+    .comments__title {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 500;
+      text-align: left; }
+      .comments__title span {
+        display: inline-block; }
+    .comments__item {
+      grid-template-areas: "img name   name" "img job    job" "img rating rating-text" "... text   text" "... date   date";
+      padding-bottom: 0;
+      padding-right: 45px;
+      grid-template-columns: 130px -webkit-max-content 1fr;
+      grid-template-columns: 130px max-content 1fr;
+      border-bottom: none; }
+    .comments__item:last-child {
+      margin-bottom: 45px; }
+    .comments__author-img {
+      width: 101px;
+      height: 101px; }
+    .comments__author-name {
+      margin-bottom: 5px;
+      margin-top: 9px;
+      font-size: 18px; }
+    .comments__author-job {
+      margin-bottom: 9px; }
+    .comments__rating-text {
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 10px;
+      margin-right: auto;
+      margin-left: 70px;
+      padding-left: 23px; }
+    .comments__text {
+      margin-bottom: 20px; }
+    .comments__date {
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgba(199, 199, 199, 0.5); }
+    .comments__show-all {
+      position: relative;
+      margin: 0;
+      margin-left: auto;
+      text-align: right; }
+    .comments__show-all::before, .comments__show-all::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid #C7C7C7;
+      border-right: 1px solid #C7C7C7;
+      transform: rotate(45deg); }
+    .comments__show-all::before {
+      left: -15px; }
+    .comments__show-all::after {
+      right: -15px; } }

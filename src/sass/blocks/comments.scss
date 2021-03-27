@@ -1,0 +1,247 @@
+.comments {
+    padding: 40px 20px;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 50px;
+
+        font-size: 28px;
+        line-height: 1.5;
+        font-weight: $fw-reg;
+        text-align: center;
+
+        & span {
+            display: none;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-areas: 
+            "img         name"
+            "img         job"
+            "img         rating"
+            "rating-text rating-text"
+            "text        text"
+            "date        date";
+        padding-bottom: 40px;
+        margin-bottom: 30px;
+
+        border-bottom: 1px solid rgba($br-clr-primary, 0.5);
+    }
+
+    &__item:last-child {
+        margin-bottom: 40px ;   
+    }
+
+    &__author-img {
+        grid-area: img;
+        width: 84px;
+        height: 84px;
+        margin-right: 20px;
+    }
+
+    &__author-name {
+        grid-area: name;
+        margin: 0;
+        margin-bottom: 3px;
+        margin-top: 6px;
+
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: $fw-med;
+    }
+
+    &__author-job {
+        grid-area: job;
+        margin: 0;
+        margin-bottom: 6px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    &__rating-img {
+        grid-area: rating;
+    }
+
+    &__rating-text,
+    &__date {
+        width: 100%;
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.5;
+        color: #B3B3B3;
+    }
+
+    &__rating-text {
+        grid-area: rating-text;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 23px;
+    }
+
+    &__rating-text::before {
+        content: '';
+
+        position: absolute;
+        top: 2px;
+        left: 0;
+
+        width: 16px;
+        height: 9px;
+
+        border-bottom: 2px solid #6AAD4A;
+        border-left: 2px solid #6AAD4A;
+        transform: rotate(-45deg);
+    }
+
+    &__text {
+        grid-area: text;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 35px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    &__date {
+        grid-area: date;
+    }
+
+    &__show-all {
+        display: block;
+        margin: 0 auto;
+        width: max-content;
+
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: $fw-med;
+        color: $clr-link;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    &__show-all:hover {
+        color: rgba($clr-link, 0.8);
+    }
+
+    &__show-all:focus {
+        outline: 3px solid $clr-link;
+    }
+
+    &__show-all:active {
+        color: rgba($clr-link, 0.3);
+    }
+}
+
+@media (min-width: $width-dsk) {
+    .comments {
+        padding: 130px 150px 50px;
+    
+        &__title {
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: $fw-med;
+            text-align: left;
+    
+            & span {
+                display: inline-block;
+            }
+        }
+    
+        &__item {
+            grid-template-areas: 
+                "img name   name"
+                "img job    job"
+                "img rating rating-text"
+                "... text   text"
+                "... date   date";
+            padding-bottom: 0;
+            padding-right: 45px;
+            grid-template-columns: 130px max-content 1fr;
+    
+            border-bottom: none;
+        }
+    
+        &__item:last-child {
+            margin-bottom: 45px ;   
+        }
+    
+        &__author-img {
+            width: 101px;
+            height: 101px;
+        }
+    
+        &__author-name {
+            margin-bottom: 5px;
+            margin-top: 9px;
+    
+            font-size: 18px;
+        }
+    
+        &__author-job {
+            margin-bottom: 9px;
+        }
+    
+        &__rating-text {
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 10px;
+            margin-right: auto;
+            margin-left: 70px;
+            padding-left: 23px;
+        }
+    
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__date {
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid rgba($br-clr-primary, 0.5);
+        }
+    
+        &__show-all {
+            position: relative;
+            margin: 0;
+            margin-left: auto;
+    
+            text-align: right;
+        }
+
+        &__show-all::before, 
+        &__show-all::after {
+            content: '';
+
+            position: absolute;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+
+            border-bottom: 1px solid $br-clr-primary;
+            border-right: 1px solid $br-clr-primary;
+            transform: rotate(45deg);
+        }
+
+        &__show-all::before {
+            left: -15px
+        }
+
+        &__show-all::after {
+            right: -15px
+        }
+    }
+}
