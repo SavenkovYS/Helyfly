@@ -121,6 +121,7 @@
     }
 
     &__show-all {
+        position: relative;
         display: block;
         margin: 0 auto;
         width: max-content;
@@ -144,11 +145,28 @@
     &__show-all:active {
         color: rgba($clr-link, 0.3);
     }
+
+    &__show-all::after {
+        content: '';
+
+        position: absolute;
+        top: 9px;
+        width: 8px;
+        height: 8px;
+
+        border-bottom: 1px solid $br-clr-primary;
+        border-right: 1px solid $br-clr-primary;
+        transform: rotate(-45deg);
+    }
+
+    &__show-all::after {
+        right: -15px
+    }
 }
 
 @media (min-width: $width-dsk) {
     .comments {
-        padding: 130px 150px 50px;
+        padding: 130px 300px 50px 150px;
     
         &__title {
             font-size: 20px;
@@ -215,7 +233,6 @@
         }
     
         &__show-all {
-            position: relative;
             margin: 0;
             margin-left: auto;
     
@@ -238,10 +255,6 @@
 
         &__show-all::before {
             left: -15px
-        }
-
-        &__show-all::after {
-            right: -15px
         }
     }
 }

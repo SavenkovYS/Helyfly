@@ -923,6 +923,7 @@ img {
   .comments__date {
     grid-area: date; }
   .comments__show-all {
+    position: relative;
     display: block;
     margin: 0 auto;
     width: -webkit-max-content;
@@ -940,10 +941,21 @@ img {
     outline: 3px solid #5286EC; }
   .comments__show-all:active {
     color: rgba(82, 134, 236, 0.3); }
+  .comments__show-all::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #C7C7C7;
+    border-right: 1px solid #C7C7C7;
+    transform: rotate(-45deg); }
+  .comments__show-all::after {
+    right: -15px; }
 
 @media (min-width: 1000px) {
   .comments {
-    padding: 130px 150px 50px; }
+    padding: 130px 300px 50px 150px; }
     .comments__title {
       font-size: 20px;
       line-height: 1.4;
@@ -982,7 +994,6 @@ img {
       padding-bottom: 25px;
       border-bottom: 1px solid rgba(199, 199, 199, 0.5); }
     .comments__show-all {
-      position: relative;
       margin: 0;
       margin-left: auto;
       text-align: right; }
@@ -996,6 +1007,121 @@ img {
       border-right: 1px solid #C7C7C7;
       transform: rotate(45deg); }
     .comments__show-all::before {
-      left: -15px; }
-    .comments__show-all::after {
-      right: -15px; } }
+      left: -15px; } }
+
+.page-footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 50px;
+  padding: 40px 20px 20px; }
+  .page-footer::after {
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: rgba(199, 199, 199, 0.5); }
+  .page-footer__logo {
+    width: 50%; }
+  .page-footer__logo-img {
+    width: 84px;
+    height: 16px; }
+  .page-footer__social-list {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end; }
+  .page-footer__language {
+    order: 4;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none; }
+  .page-footer__payment-list {
+    margin-bottom: 25px; }
+  .page-footer__text {
+    width: 100%;
+    order: 5;
+    margin-top: -25px;
+    color: #B3B3B3;
+    text-align: center;
+    font-size: 14px; }
+    .page-footer__text span {
+      display: block;
+      margin-bottom: 10px; }
+    .page-footer__text span:last-child {
+      margin-bottom: 0; }
+
+@media (min-width: 1000px) {
+  .page-footer {
+    padding: 40px 150px 20px; }
+    .page-footer::after {
+      display: none; }
+    .page-footer__logo {
+      width: 50%; }
+    .page-footer__logo-img {
+      width: 129px;
+      height: 23px; }
+    .page-footer__social-list {
+      width: calc(50% - 75px); }
+    .page-footer__language {
+      order: 3;
+      width: 45px;
+      margin-left: 30px; }
+    .page-footer__payment-list {
+      position: absolute;
+      bottom: 20px;
+      left: 150px;
+      width: 50%;
+      order: 4;
+      margin-bottom: 25px; }
+    .page-footer__text {
+      width: 100%;
+      margin-top: 0;
+      text-align: center; } }
+
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .social__item + .social__item {
+    margin-left: 30px; }
+  .social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    transition: opacity 0.1s ease; }
+  .social__link:hover {
+    opacity: 0.8; }
+  .social__link:focus {
+    outline: 3px solid #5286EC;
+    outline-offset: 2px; }
+  .social__link:active {
+    opacity: 0.4; }
+
+.payment {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .payment__item {
+    width: 34px;
+    height: 23px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .payment__item--mastercard {
+    background-image: url("../../img/icon-mastercard.png");
+    background-size: 34px 21px; }
+  .payment__item--visa {
+    background-image: url("../../img/icon-visa.png");
+    background-size: 33px 23px; }
+  .payment__item--paypal {
+    background-image: url("../../img/icon-paypal.png");
+    background-size: 34px 23px; }
+  .payment__item + .payment__item {
+    margin-left: 17px; }

@@ -1,0 +1,34 @@
+.payment {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    &__item {
+        width: 34px;
+        height: 23px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__item--mastercard {
+        background-image: url('../../img/icon-mastercard.png');
+        background-size: 34px 21px;
+    }
+
+    &__item--visa {
+        background-image: url('../../img/icon-visa.png');
+        background-size: 33px 23px;
+    }
+
+    &__item--paypal {
+        background-image: url('../../img/icon-paypal.png');
+        background-size: 34px 23px;
+    }
+
+    &__item + &__item {
+        margin-left: 17px;
+    }
+}
