@@ -1,0 +1,292 @@
+.modal {
+    position: relative;
+    width: calc(100% - 40px);
+    padding: 50px 20px 35px;
+
+    color: $clr-text;
+
+    background-color: #fff;
+    border: 1px solid $br-clr-primary;
+    border-radius: 5px;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+
+        font-size: 18px;
+        line-height: 1.6;
+        font-weight: $fw-semibold;
+        text-align: center;
+    }
+
+    &__close {
+        position: absolute;
+        top: 17px;
+        right: 16px;
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url('../../img/icon-close.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 17px 17px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__form-list {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__form-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    &__form-item--card {
+        margin-top: 20px;
+    }
+
+    &__form-item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__label {
+        width: max-content;
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        font-weight: $fw-med;
+        line-height: 1.2;
+    }
+
+    &__star {
+        color: #C94042;
+    }
+
+    &__input {
+        padding: 10px 18px;
+
+        font-size: 16px;
+        font-weight: $fw-reg;
+
+        border: 1px solid $br-clr-primary;
+        border-radius: 5px;
+    }
+
+    &__card-group {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+    }
+
+    &__card-group-title {
+        float: left;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        font-weight: $fw-med;
+        line-height: 1.2;
+    }
+
+    &__card-group-list {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+
+        list-style: none;
+        clear: both;
+    }
+
+    &__card-group-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-group-item--number {
+        margin-bottom: -1px;
+    }
+
+    &__card-group-item--cvv {
+        margin-top: -1px;
+    }
+
+    &__input--card-group {
+        border-radius: 0;
+    }
+
+    &__input--card-number {
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__input--card-cvv {
+        border-radius: 0 0 5px 5px;
+    }
+
+    &__agree {
+        margin: 0;
+        margin-bottom: 25px;
+        
+    }
+
+    &__agree-text {
+        display: block;
+        position: relative;
+
+        padding-left: 25px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    input[type="checkbox"] + &__agree-text::before {
+        content: '';
+
+        position: absolute;
+        top: 1px;
+        left: 0;
+
+        width: 16px;
+        height: 16px;
+
+        background-color: $clr-accent;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + &__agree-text::before {
+        box-shadow: 0 0 3px 0 rgba(#C94042, 0.6);
+    }
+
+    input[type="checkbox"]:checked + &__agree-text::after {
+        content: '';
+
+        position: absolute;
+        top: 5px;
+        left: 4px;
+
+        width: 9px;
+        height: 5px;
+
+        border-bottom: 2px solid #fff;
+        border-left: 2px solid #fff;
+        transform: rotate(-45deg); 
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    &__submit {
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        padding: 15px 60px;
+
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.2;
+
+        background-color: $clr-accent;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $width-dsk) {
+    .modal {
+        width: 615px;
+        padding: 60px 100px;
+    
+        &__title {
+            margin-bottom: 30px;
+    
+            font-size: 22px;
+            line-height: 1.5;
+        }
+    
+        &__close {
+            top: 22px;
+            right: 24px;
+    
+            width: 22px;
+            height: 22px;
+    
+            background-size: 20px 20px;
+        }
+          
+        &__form-item--card {
+            margin-top: 10px;
+        }
+    
+        &__card-group-title {
+            left: 0;
+            transform: none;
+        }
+    
+        &__card-group-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+    
+        &__card-group-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__card-group-item--number {
+            width: 100%;
+        }
+
+        &__card-group-item--expire {
+            margin-right: -1px;
+            width: calc(50% + 1px);
+        }
+
+        &__card-group-item--cvv {
+            margin-top: 0;
+            width: 50%;
+        }
+    
+        &__input--card-group {
+            border-radius: 0;
+        }
+
+        &__input--card-number {
+            border-radius: 5px 5px 0 0;
+        }
+
+        &__input--card-expire {
+            border-radius: 0 0 0 5px;
+        }
+    
+        &__input--card-cvv {   
+            border-radius: 0 0 5px 0;
+        }
+    
+        input[type="checkbox"] + &__agree-text::before {
+            top: 2px;
+        }
+    
+        input[type="checkbox"]:checked + &__agree-text::after {
+            top: 6px;
+        }
+    
+        &__submit {
+            width: 390px;
+            padding: 25px 60px;
+    
+            font-size: 16px;
+            font-weight: $fw-semibold;
+        }
+    }
+}

@@ -325,6 +325,63 @@
             <span>© 2018 HELYFLY. All Rights Reserved</span>
         </small>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО ПРИ БРОНИРОВАНИИ -->
+
+    <div class="overlay">
+        <div class="modal">
+            <h2 class="modal__title">Бронирование</h2>
+            <button class="modal__close" aria-label="Закрыть"></button>
+            <form class="modal__form" action="" method="POST">
+                <ul class="modal__form-list">
+                    <li class="modal__form-item">
+                        <label class="modal__label modal__label--date" for="date">Дата<span class="modal__star">*</span></label>
+                        <input class="modal__input" type="date" id="date" name="date" required>
+                    </li>
+                    <li class="modal__form-item">
+                        <label class="modal__label" for="email">Email<span class="modal__star">*</span></label>
+                        <input class="modal__input" type="email" id="email" name="email" placeholder="Электронная почта" required>
+                    </li>
+                    <li class="modal__form-item"> 
+                        <label class="modal__label" for="first-name">Имя<span class="modal__star">*</span></label>
+                        <input class="modal__input" type="text" id="first-name" name="first-name" placeholder="Иван" required>
+                    </li>
+                    <li class="modal__form-item">
+                        <label class="modal__label" for="last-name">Фамилия<span class="modal__star">*</span></label>
+                        <input class="modal__input" type="text" id="last-name" name="last-name" placeholder="Громов" required>
+                    </li>
+                    <li class="modal__form-item">
+                        <label class="modal__label" for="phone">Телефон<span class="modal__star">*</span></label>
+                        <input class="modal__input" type="tel" id="phone" name="phone" required>
+                    </li>
+                    <li class="modal__form-item modal__form-item--card">
+                        <fieldset class="modal__card-group">
+                            <legend class="modal__card-group-title">Данные карты<span class="modal__star">*</span></legend>
+                            <ul class="modal__card-group-list">
+                                <li class="modal__card-group-item modal__card-group-item--number">
+                                    <label class="visually-hidden" for="card-number">Номер карты</label>
+                                    <input class="modal__input modal__input--card-group modal__input--card-number" type="text" id="card-number" name="card-number" placeholder="Номер карты"required>
+                                </li>
+                                <li class="modal__card-group-item modal__card-group-item--expire">
+                                    <label class="visually-hidden" for="card-expire">Срок действия карты</label>
+                                    <input class="modal__input modal__input--card-group modal__input--card-expire" type="text" id="card-expire" name="card-expire" placeholder="Срок действия" required>
+                                </li>
+                                <li class="modal__card-group-item modal__card-group-item--cvv">
+                                    <label class="visually-hidden" for="card-cvv">CVV</label>
+                                    <input class="modal__input modal__input--card-group modal__input--card-cvv" type="text" id="card-cvv" name="card-cvv" placeholder="CVV" required>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </li>
+                </ul>
+                <p class="modal__agree">
+                    <input class="visually-hidden" type="checkbox" name="agree" id="agree" required>
+                    <label class="modal__agree-text" for="agree">Я согласен с пользовательским соглашением и публичной офертой</label>
+                </p>
+                <button class="modal__submit">Забронировать</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
     

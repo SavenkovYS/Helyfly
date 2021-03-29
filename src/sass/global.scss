@@ -35,3 +35,33 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+// Placeholders
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-family: $ff-primary;
+  color: #C7C7C7;
+  font-weight: $fw-reg;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder { 
+  font-family: $ff-primary;
+  color: #C7C7C7;
+  font-weight: $fw-reg;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {  
+  font-family: $ff-primary;
+  color: #C7C7C7;
+  font-weight: $fw-reg;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {  
+  font-family: $ff-primary;
+  color: #C7C7C7;
+  font-weight: $fw-reg;
+}
