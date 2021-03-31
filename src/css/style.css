@@ -52,6 +52,31 @@ textarea:-ms-input-placeholder {
   color: #C7C7C7;
   font-weight: 400; }
 
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #FC9B09;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #FC9B09;
+  border-radius: 5px;
+  transition: color 0.2s ease-in-out, border 0.2s ease-in-out; }
+
+.button:hover {
+  color: rgba(252, 155, 9, 0.6);
+  border-color: rgba(252, 155, 9, 0.6); }
+
+.button:focus {
+  outline: 3px solid #FC9B09;
+  outline-offset: 4px; }
+
+.button:active {
+  color: rgba(252, 155, 9, 0.3);
+  border-color: rgba(252, 155, 9, 0.3); }
+
 @font-face {
   font-family: 'Montserrat';
   font-weight: 400;
@@ -204,8 +229,14 @@ textarea:-ms-input-placeholder {
     font-weight: 900;
     text-decoration: none;
     text-align: center;
-    border: 1px solid #FC9B09;
-    border-radius: 5px; }
+    border: 1px solid rgba(252, 155, 9, 0.5);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
+  .intro__book:hover {
+    border-color: #FC9B09;
+    background-color: #FC9B09;
+    color: #fff; }
 
 @media (min-width: 1000px) {
   .intro {
@@ -444,7 +475,21 @@ textarea:-ms-input-placeholder {
     .photoshoot__show-all::before {
       left: 10px; }
     .photoshoot__show-all::after {
-      right: 10px; } }
+      right: 10px; }
+    .photoshoot__gallery-item {
+      visibility: visible;
+      height: 260px;
+      opacity: 1;
+      transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 1s ease-in-out; }
+    .photoshoot__gallery-item--hidden {
+      visibility: hidden;
+      opacity: 0;
+      height: 0; }
+    .photoshoot__show-all::before, .photoshoot__show-all::after {
+      transition: transform 0.5s ease-in-out, top 0.5s ease-in-out; }
+    .photoshoot__show-all--shown::before, .photoshoot__show-all--shown::after {
+      top: 10px;
+      transform: rotate(225deg); } }
 
 .about {
   padding: 30px 20px; }
@@ -521,6 +566,11 @@ textarea:-ms-input-placeholder {
     transform: rotate(45deg); }
   .about__author-description {
     margin-bottom: 25px; }
+  .about__read-more::after {
+    transition: transform 0.3s ease-in-out; }
+  .about__read-more--hide::after {
+    top: 10px;
+    transform: rotate(225deg); }
 
 @media (min-width: 1000px) {
   .about {
@@ -572,39 +622,23 @@ textarea:-ms-input-placeholder {
     max-width: 400px;
     margin: 0 auto;
     border: 1px solid #C7C7C7; }
-  .enroll__date {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.4;
+  .enroll__date-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 15px 20px;
     border-bottom: 1px solid rgba(199, 199, 199, 0.5); }
+  .enroll__date {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center; }
     .enroll__date span {
       font-weight: 500; }
-  .enroll__date-input {
-    position: absolute;
-    top: 10px;
-    left: 300px;
-    width: 35px;
-    height: 40px;
-    border: none;
-    cursor: pointer; }
-  .enroll__date-input::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-    background-image: url("../../img/icon-date.png");
-    background-size: 18px 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    pointer-events: none;
-    z-index: 10;
-    background-color: inherit; }
+  .enroll__pick-date {
+    width: 180px;
+    margin: 0 auto; }
   .enroll__list {
     padding: 0;
     margin: 0;
@@ -623,25 +657,7 @@ textarea:-ms-input-placeholder {
   .enroll__price {
     font-weight: 600; }
   .enroll__book {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 500;
-    color: #FC9B09;
-    text-decoration: none;
-    border: 2px solid #FC9B09;
-    border-radius: 5px;
-    transition: color 0.2s ease-in-out, border 0.2s ease-in-out; }
-  .enroll__book:hover {
-    color: rgba(252, 155, 9, 0.6);
-    border-color: rgba(252, 155, 9, 0.6); }
-  .enroll__book:focus {
-    outline: 3px solid #FC9B09;
-    outline-offset: 4px; }
-  .enroll__book:active {
-    color: rgba(252, 155, 9, 0.3);
-    border-color: rgba(252, 155, 9, 0.3); }
+    width: 120px; }
   .enroll__rating {
     position: relative;
     margin: 0;
@@ -686,12 +702,16 @@ textarea:-ms-input-placeholder {
     .enroll__container {
       max-width: 1200px;
       margin: 0; }
+    .enroll__date-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 30px; }
     .enroll__date {
       text-align: left;
-      padding: 25px 30px; }
-    .enroll__date-input {
-      top: 20px;
-      left: 220px; }
+      margin-bottom: 0; }
+    .enroll__pick-date {
+      margin: 0; }
     .enroll__item {
       display: flex;
       justify-content: space-between;

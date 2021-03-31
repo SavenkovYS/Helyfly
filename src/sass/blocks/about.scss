@@ -113,6 +113,17 @@
     &__author-description {
         margin-bottom: 25px;
     }
+
+    // Скрыть / показать весь текст
+
+    &__read-more::after {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__read-more--hide::after {
+        top: 10px;
+        transform: rotate(225deg);
+    }
 }
 
 @media (min-width: $width-dsk) {

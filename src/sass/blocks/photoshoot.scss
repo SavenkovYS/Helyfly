@@ -352,5 +352,34 @@
         &__show-all::after {
             right: 10px
         }
+
+        // Развернутая / свернутая галерея
+
+        &__gallery-item {
+            visibility: visible;
+            height: 260px;
+            opacity: 1;
+            transition: height 0.5s ease-in-out,
+                        opacity 0.5s ease-in-out,
+                        visibility 1s ease-in-out;
+        }
+
+        &__gallery-item--hidden {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+        }
+
+        &__show-all::before,
+        &__show-all::after {
+            transition: transform 0.5s ease-in-out,
+                        top 0.5s ease-in-out;
+        }
+
+        &__show-all--shown::before,
+        &__show-all--shown::after {
+            top: 10px;
+            transform: rotate(225deg);
+        }
     }
 }

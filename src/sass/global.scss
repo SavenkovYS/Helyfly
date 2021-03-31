@@ -40,28 +40,62 @@ img {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-family: $ff-primary;
-  color: #C7C7C7;
-  font-weight: $fw-reg;
+    font-family: $ff-primary;
+    color: #C7C7C7;
+    font-weight: $fw-reg;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder { 
-  font-family: $ff-primary;
-  color: #C7C7C7;
-  font-weight: $fw-reg;
+    font-family: $ff-primary;
+    color: #C7C7C7;
+    font-weight: $fw-reg;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {  
-  font-family: $ff-primary;
-  color: #C7C7C7;
-  font-weight: $fw-reg;
+    font-family: $ff-primary;
+    color: #C7C7C7;
+    font-weight: $fw-reg;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {  
-  font-family: $ff-primary;
-  color: #C7C7C7;
-  font-weight: $fw-reg;
+    font-family: $ff-primary;
+    color: #C7C7C7;
+    font-weight: $fw-reg;
+}
+
+// Кнопки 
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: $fw-med;
+    color: $clr-accent;
+    text-decoration: none;
+    text-align: center;
+
+    border: 2px solid $clr-accent;
+    border-radius: 5px;
+    transition: color 0.2s ease-in-out,
+                border 0.2s ease-in-out;
+}
+
+.button:hover {
+  color: rgba($clr-accent, 0.6);
+  border-color: rgba($clr-accent, 0.6);
+}
+
+.button:focus {
+  outline: 3px solid $clr-accent;
+  outline-offset: 4px;
+}
+
+.button:active {
+  color: rgba($clr-accent, 0.3);
+  border-color: rgba($clr-accent, 0.3);
 }
