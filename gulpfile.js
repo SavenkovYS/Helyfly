@@ -20,10 +20,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -102,7 +102,7 @@ gulp.task("serve", function() {
 });
 
 
-var build = gulp.series("clean", "copy", "style", "compress", "webp", "images", "html");
+var build = gulp.series("clean", "copy", "style", "compress", "images", "html");
 
 var watch = gulp.parallel("serve", "browserSync");
 
