@@ -26,6 +26,11 @@
         width: 50%;
     }
 
+    &__logo-link:focus {
+        outline: 2px solid #000;
+        outline-offset: 2px;
+    }
+
     &__logo-img {
         width: 84px;
         height: 16px;
@@ -44,6 +49,11 @@
         font-size: 15px;
 
         border: none;
+        cursor: pointer;
+    }
+
+    &__language:focus {
+        outline: 2px solid #000;
     }
 
     &__payment-list {

@@ -1,8 +1,15 @@
 .venue {
 
     &__map {
+        position: relative;
         width: 100%;
         margin-bottom: 50px;
+    }
+
+    &__interactive-map {
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 
     &__map-img {
@@ -20,6 +27,7 @@
         align-items: center;
         width: 80%;
         min-width: 280px;
+        max-width: 500px;
         margin: 0 auto;
         padding: 50px;
         
@@ -76,6 +84,10 @@
         line-height: 1.4;
     }
 
+    &__pagination {
+        margin-bottom: 40px;
+    }
+
     &__organiser {
         display: flex;
         max-width: 240px;
@@ -110,6 +122,18 @@
         font-weight: $fw-med;
         text-decoration: none;
         color: $clr-link;
+    }
+
+    &__organiser-more:hover {
+        color: rgba($clr-link, 0.8);
+    }
+
+    &__organiser-more:active {
+        color: rgba($clr-link, 0.3);
+    }
+
+    &__organiser-more:focus {
+        outline: 3px solid $clr-link;
     }
 }
 
@@ -200,6 +224,14 @@
             & span {
                 display: none;
             }
+        }
+
+        &__pagination {
+            display: none;
+        }
+
+        &__arrows {
+            display: none;
         }
     }
 }

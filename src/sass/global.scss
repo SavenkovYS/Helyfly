@@ -80,9 +80,11 @@ textarea:-ms-input-placeholder {
     text-align: center;
 
     border: 2px solid $clr-accent;
+    background-color: transparent;
     border-radius: 5px;
     transition: color 0.2s ease-in-out,
                 border 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .button:hover {

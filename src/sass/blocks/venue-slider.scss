@@ -1,0 +1,93 @@
+@media (max-width: 1000px) {
+    .venue-slider {
+        position: relative;
+        
+        overflow: hidden;
+
+        &__container {
+            display: flex;
+            width: 300%;
+            transform: translateX(calc(100% / 3));
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &__item {
+            width: 100%;    
+        }
+
+        &__pagination {
+            display: flex;
+            justify-content: space-between;
+            width: 15%;
+        }
+
+        &__pagination-item {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            
+            border: 1px solid $br-clr-primary;
+            border-radius: 50%;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &__pagination-item--active {
+            background-color: $clr-accent;
+            border-color: $clr-accent;
+        }
+
+        &__pagination-item:focus {
+            outline: 0;
+            box-shadow: 0 0 0 2px $clr-accent;
+            border-color: $clr-accent;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 75px;
+
+            width: 19px;
+            height: 19px;
+
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        &__arrow--next {
+            right: 20px;
+        }
+
+        &__arrow--prev {
+            left: 20px;
+        }
+
+        &__arrow::before {
+            content: '';
+
+            position: absolute;
+            top: 3px;
+
+            width: 13px;
+            height: 13px;
+
+            border-left: 2px solid $br-clr-primary;
+            border-bottom: 2px solid $br-clr-primary;
+        }
+
+        &__arrow--next::before {
+            left: 0;
+            transform: rotate(-135deg);
+        }
+
+        &__arrow--prev::before {
+            right: 0;
+            transform: rotate(45deg);
+        }
+
+        &__arrow:focus {
+            outline: 3px solid $br-clr-primary;
+        }
+    }
+}

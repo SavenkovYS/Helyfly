@@ -1,0 +1,13 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.8);
+    transition: transition 0s ease 2s;
+
+    &--closed {
+        transform: translateY(200vh);
+    }
+}

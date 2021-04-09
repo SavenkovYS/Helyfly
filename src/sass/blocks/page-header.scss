@@ -8,6 +8,10 @@
         height: 16px;
     }
 
+    &__logo:focus {
+        outline: 3px solid #000;    
+    }
+
     &__whereabouts {
         display: block;
         margin: 0 auto;
@@ -16,6 +20,18 @@
         line-height: 1.2;
         color: $clr-link;
         text-decoration: none;
+    }
+
+    &__whereabouts:hover {
+        color: rgba($clr-link, 0.8);
+    }
+
+    &__whereabouts:focus {
+        outline: 3px solid $clr-link;
+    }
+
+    &__whereabouts:active {
+        color: rgba($clr-link, 0.3);
     }
 
     &__phone {
@@ -34,6 +50,10 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
+    }
+
+    &__profile:focus {
+        outline: 3px solid #000;
     }
 }
 
